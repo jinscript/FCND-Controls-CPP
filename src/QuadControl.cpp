@@ -73,13 +73,13 @@ VehicleCommand QuadControl::GenerateMotorCommands(float collThrustCmd, V3F momen
   float F_tau_y = momentCmd.y / L * sqrt(2.f);
   float F_tau_z = -momentCmd.z / kappa;
   // front left
-  cmd.desiredThrustsN[0] = CONSTRAIN((collThrustCmd + F_tau_x + F_tau_y + F_tau_z) / 4.f, minMotorThrust, maxMotorThrust);
+  cmd.desiredThrustsN[0] = (collThrustCmd + F_tau_x + F_tau_y + F_tau_z) / 4.f;
   // front right
-  cmd.desiredThrustsN[1] = CONSTRAIN((collThrustCmd - F_tau_x + F_tau_y - F_tau_z) / 4.f, minMotorThrust, maxMotorThrust);
+  cmd.desiredThrustsN[1] = (collThrustCmd - F_tau_x + F_tau_y - F_tau_z) / 4.f;
   // rear left
-  cmd.desiredThrustsN[2] = CONSTRAIN((collThrustCmd + F_tau_x - F_tau_y - F_tau_z) / 4.f, minMotorThrust, maxMotorThrust);
+  cmd.desiredThrustsN[2] = (collThrustCmd + F_tau_x - F_tau_y - F_tau_z) / 4.f;
   // rear right
-  cmd.desiredThrustsN[3] = CONSTRAIN((collThrustCmd - F_tau_x - F_tau_y + F_tau_z) / 4.f, minMotorThrust, maxMotorThrust);
+  cmd.desiredThrustsN[3] = (collThrustCmd - F_tau_x - F_tau_y + F_tau_z) / 4.f;
   /////////////////////////////// END STUDENT CODE ////////////////////////////
 
   return cmd;
