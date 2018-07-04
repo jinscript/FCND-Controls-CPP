@@ -17,6 +17,7 @@ Implemented  in `QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> a
 Formula:
 
 ![altitude](formula/roll_pitch1.png)
+
 ![altitude](formula/roll_pitch2.png)
 
 ## Altitude Control
@@ -26,7 +27,9 @@ Implemented in `QuadControl::AltitudeControl(float posZCmd, float velZCmd, float
 Formula:
 
 ![altitude](formula/altitude1.png)
+
 ![altitude](formula/altitude2.png)
+
 ![altitude](formula/altitude3.png)
 
 ## Lateral Position Control
@@ -52,4 +55,5 @@ Implemented in `QuadControl::GenerateMotorCommands(float collThrustCmd, V3F mome
 Formula:
 
 ![motor_gen1](formula/motor_gen1.png)
+
 ![motor_gen2](formula/motor_gen2.png)
