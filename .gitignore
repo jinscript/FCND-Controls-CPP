@@ -29,3 +29,5 @@ build/
 
 .vscode/
 project/FCND-CPPSim.xcodeproj/
+.DS_Store
+
